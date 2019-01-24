@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Demonstrates the use of Google Cloud Database with a Firebase DB">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Database Quickstart</title>
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Firebase Database Quickstart">
+  <meta name="theme-color" content="#303F9F">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Firebase Database Quickstart">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
+
+  <!-- Tile icon for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+  <meta name="msapplication-navbutton-color" content="#303F9F">
+
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <script src="https://unpkg.com/geofirestore@3.0.0/dist/geofirestore.js"></script>
+
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <h3 class="logo">Database Web Quickstart</h3>
+    Username
+    <textarea id="user-name"></textarea>
+    Latitude
+    <textarea id="user-lat"></textarea>
+    Longitude
+    <textarea id="user-long"></textarea>
+    <div>
+      <button id="add-data-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i>Add data!</button>
+    </div>
+
+    <div>
+      <button id="read-data-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i>Read data!</button>
+    </div>
+    <h3 class="logo">Get Closest Users</h3>
+    Latitude
+    <textarea id="query-lat"></textarea>
+    Longitude
+    <textarea id="query-long"></textarea>
+    Radius (km)
+    <textarea id="query-radius"></textarea>
+    <div>
+      <button id="query-data-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i>Get Users!</button>
+    </div>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase-firestore.js"></script>
+<!-- <script src="/__/firebase/init.js"></script> -->
+
+
+<!-- <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script> -->
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBde7PBwcMrjW8EGyWJho3ysARqmAL1JJc",
+    authDomain: "geo-trial-pro.firebaseapp.com",
+    databaseURL: "https://geo-trial-pro.firebaseio.com",
+    projectId: "geo-trial-pro",
+    storageBucket: "geo-trial-pro.appspot.com",
+    messagingSenderId: "603720880322"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="/scripts/main.js"></script>
+</body>
+</html>
